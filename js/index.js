@@ -40,7 +40,7 @@ var app = {
     },
     errorHandler:function(error) {
         console.log("Error Handler  " + error);
-        alert(error);
+        alert('messaggio errore:\n' + error);
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
