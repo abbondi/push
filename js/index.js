@@ -36,7 +36,14 @@ var app = {
         app.receivedEvent('deviceready');
     },
     tokenHandler:function(msg) {
-        console.log("Token Handler " + msg);
+        //console.log("Token Handler " + msg);
+		//YOUR_PUSHWOOSH_APP_ID
+		PushWoosh.appCode = "BA863-7EC5F";
+    	PushWoosh.register(msg, function(data) {
+                        alert("PushWoosh register success: " + JSON.stringify(data));
+                    }, function(errorregistration) {
+                        alert("Couldn't register with PushWoosh" +  errorregistration);
+                    });
     },
     errorHandler:function(error) {
         console.log("Error Handler  " + error);
@@ -90,11 +97,18 @@ var app = {
         {
             case 'registered':
                 if ( e.regid.length > 0 )
-                {
-                    // Your GCM push server needs to know the regID before it can push to this device
-                    // here is where you might want to send it the regID for later use.
-                    alert('registration id = '+e.regid);
-                }
+				 {
+					 // Your GCM push server needs to know the regID before it can push to this device
+					 // here is where you might want to send it the regID for later use.
+					 //YOUR_PUSHWOOSH_APP_ID
+					 PushWoosh.appCode = "BA863-7EC5F";
+					 PushWoosh.register(e.regid, function(data) {
+								 alert("PushWoosh register success: " + JSON.stringify(data));
+							 }, function(errorregistration) {
+								 alert("Couldn't register with PushWoosh" +  errorregistration);
+							 });
+		 
+				 }
             break;
 
             case 'message':
@@ -111,6 +125,18 @@ var app = {
               alert('An unknown GCM event has occurred');
               break;
         }
-    }
+    },
+	
+	
+	
+	
+	/* PERSONALIZZAZIONI */
+	
+	
+	/* FINE PERSONALIZZAZIONI */
+	
+	
+	
+	
 
 };
