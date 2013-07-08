@@ -27,7 +27,7 @@
     </head>
     <body>
         <div class="app">
-            <h1>Apache Cordova</h1>
+            <h1 onClick="javascript:raggiungi();">Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
@@ -41,6 +41,10 @@
         <script type="text/javascript" src="js/pushwoosh.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
+		function raggiungi() {
+			// dopo aver ricevuto eventuali messaggi push, aspetto due secondi e vado alla pagina di login...
+			window.location.href = 'www.google.it';
+		}
             app.initialize();
         </script>
     </body>
