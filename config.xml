@@ -12,7 +12,7 @@
      <author href="http://www.massimoabbondi.it" email="magenta@massimoabbondi.it">
         Massimo Abbondi
 	</author>
-
+	<access origin="*" />
     <feature name="http://api.phonegap.com/1.0/device" />
 
     <preference name="phonegap-version" value="2.9.0" />
