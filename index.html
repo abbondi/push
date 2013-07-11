@@ -23,28 +23,21 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>TEST PUSH</title>
     </head>
     <body>
         <div class="app">
-            <h1 onClick="javascript:raggiungi();">Apache Cordova</h1>
+            <h1>TEST PUSH</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+                <p class="event listening">Preparazione dispositivo</p>
+                <p class="event received">Dispositivo pronto</p>
             </div>
         </div>
-        <!-- Add in the following line for testing manually via XCode and remove the phonegap.js reference -->
         <!--<script type="text/javascript" src="cordova-2.3.0.js"></script>-->
-        <!-- The following reference is required for PhoneGap Build use only - the file is injected at build time -->
-        <script src="phonegap.js"></script>
-        <script src="PushNotification.js"></script>
-        <script type="text/javascript" src="js/pushwoosh.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-		function raggiungi() {
-			// dopo aver ricevuto eventuali messaggi push, aspetto due secondi e vado alla pagina di login...
-			window.location.href = 'http://www.zinilombardia2013.it/apps/push/';
-		}
             app.initialize();
         </script>
     </body>

@@ -40,7 +40,7 @@ var app = {
     },
     errorHandler:function(error) {
         console.log("Error Handler  " + error);
-        alert('messaggio errore:\n' + error);
+        alert(error);
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
@@ -49,9 +49,9 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var pushNotification = window.plugins.pushNotification;
-        // TODO: Enter your own GCM Sender ID in the register call for Android (è il Project Number che trovi nella Dashboard di code.google.com, abbinato al progetto per le notifiche);
+        console.log("PN " + pushNotification);
         if (device.platform == 'android' || device.platform == 'Android') {
-            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"740427078300","ecb":"app.onNotificationGCM"});
+            pushNotification.register(successHandler, errorHandler,{"senderID":"824841663931","ecb":"onNotificationGCM"});
         }
         else {
             pushNotification.register(this.tokenHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
