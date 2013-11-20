@@ -26,7 +26,7 @@ function registerPushwooshIOS() {
 				navigator.notification.alert(notification.aps.alert);
 				
 				//to view full push payload
-				//navigator.notification.alert(JSON.stringify(notification));
+				navigator.notification.alert(JSON.stringify(notification));
 				
 				//reset badges on icon
 				pushNotification.setApplicationIconBadgeNumber(0);
@@ -40,7 +40,7 @@ function registerPushwooshIOS() {
 									},
 									function(status) {
 										console.warn('failed to register : ' + JSON.stringify(status));
-										//navigator.notification.alert(JSON.stringify(['failed to register ', status]));
+										navigator.notification.alert(JSON.stringify(['failed to register ', status]));
 									});
 	
 	//reset badges on start
@@ -89,12 +89,12 @@ function registerPushwooshAndroid() {
 	//projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID"
 	pushNotification.registerDevice({ projectid: "84600895589", appid : "E6683-1156A" },
 									function(token) {
-										//alert(token);
+										alert(token);
 										//callback when pushwoosh is ready
 										onPushwooshAndroidInitialized(token);
 									},
 									function(status) {
-										//alert("failed to register: " +  status);
+										alert("failed to register: " +  status);
 									    console.warn(JSON.stringify(['failed to register ', status]));
 									});
  }
@@ -158,7 +158,7 @@ function onPushwooshAndroidInitialized(pushToken)
 	// onError Callback receives a PositionError object
 	//
 	function geolocationError(error) {
-		//alert('code: '    + error.code    + '\n' +  'message: ' + error.message + '\n');
+		alert('code: '    + error.code    + '\n' +  'message: ' + error.message + '\n');
 	}
 	
 	function getCurrentPosition() {
