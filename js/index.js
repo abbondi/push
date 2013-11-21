@@ -39,7 +39,7 @@ function registerPushwooshIOS() {
 										onPushwooshiOSInitialized(deviceToken);
 									},
 									function(status) {
-										console.warn('failed to register : ' + JSON.stringify(status));
+										console.warn('errore register : ' + JSON.stringify(status));
 										navigator.notification.alert(JSON.stringify(['failed to register ', status]));
 									});
 	//pw_appid:"4F0C807E51EC77.93591449", appname:"Pushwoosh"
