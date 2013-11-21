@@ -42,7 +42,7 @@ function registerPushwooshIOS() {
 										console.warn('failed to register : ' + JSON.stringify(status));
 										navigator.notification.alert(JSON.stringify(['failed to register ', status]));
 									});
-	
+	//pw_appid:"4F0C807E51EC77.93591449", appname:"Pushwoosh"
 	//reset badges on start
 	pushNotification.setApplicationIconBadgeNumber(0);
 }
