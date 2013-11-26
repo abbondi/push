@@ -32,7 +32,7 @@ function registerPushwooshIOS() {
 				pushNotification.setApplicationIconBadgeNumber(0);
 			  });
 
-	pushNotification.registerDevice({alert:true, badge:true, sound:true, pw_appid:"E6683-1156A", appname:"Pandino"},
+	pushNotification.registerDevice({alert:true, badge:true, sound:true, pw_appid:"1CC7D-4BF79", appname:"Pandino"},
 									function(status) {
 										var deviceToken = status['deviceToken'];
 										console.warn('registerDevice: ' + deviceToken);
@@ -87,7 +87,7 @@ function registerPushwooshAndroid() {
 			  });
 
 	//projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID"
-	pushNotification.registerDevice({ projectid: "84600895589", appid : "E6683-1156A" },
+	pushNotification.registerDevice({ projectid: "84600895589", appid : "1CC7D-4BF79" },
 									function(token) {
 										alert(token);
 										//callback when pushwoosh is ready
